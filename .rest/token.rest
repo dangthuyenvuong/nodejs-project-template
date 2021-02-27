@@ -1,0 +1,39 @@
+
+POST {{host}}/login
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "password@"
+}
+####
+
+
+POST {{host}}/register
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "password@",
+    "name": "supper admin"
+}
+
+
+#### update-info
+POST {{host}}/update-info
+Content-Type: application/json
+Authorization: Beare {{accessToken}}
+
+{
+    "name": "Admin"
+}
+
+
+
+#### refresh token
+GET {{host}}/refresh-token
+Content-Type: application/json
+
+{
+    "refreshToken": "{{refreshToken}}"
+}

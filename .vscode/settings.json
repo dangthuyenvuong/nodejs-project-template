@@ -1,0 +1,9 @@
+{
+    "rest-client.environmentVariables": {
+        "$shared": {
+            "host": "http://localhost:5000",
+            "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYwM2EzNzg5NjEyMTMwMGFmMGQxZTUxMSIsInVzZXJuYW1lIjoiYWRtaW4iLCJuYW1lIjoic3VwcGVyIGFkbWluIn0sImlhdCI6MTYxNDQyODA0MSwiZXhwIjoxNjE4MDI4MDQxfQ.j3U7h3zNTR_zDBaT7LLKFhclSrdICjfr8roFeDp4v7E",
+            "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYwM2EzNzg5NjEyMTMwMGFmMGQxZTUxMSIsInVzZXJuYW1lIjoiYWRtaW4iLCJuYW1lIjoic3VwcGVyIGFkbWluIn0sImlhdCI6MTYxNDQyODA0MX0.oLirvX-IS1Hc6mu0jEbY2fM_3w8matWQ3rO1MwNaQF0"
+        }
+    }
+}
