@@ -9,9 +9,16 @@ import createError from 'http-errors'
 import dotenv from 'dotenv'
 import http from 'http'
 import debug from 'debug'
+
+// api version 
+import routerV1 from './resources/v1/routers'
+import routerV2 from './resources/v2/routers'
+
 import indexRouter from './routers'
 import user from './routers/user'
 import department from './routers/department'
+import apiversion from './core/apiversion'
+import fileUpload from 'express-fileupload'
 
 const moduleURL = new URL(import.meta.url);
 global.__dirname = path.dirname(moduleURL.pathname.substring(1));
@@ -42,11 +49,21 @@ app.use(cookieParser())
 // setup folder contain assets
 app.use(express.static((path.join(__dirname, 'public'))))
 
+// upload file
+app.use(fileUpload({
+    useTempFiles: true,
+    tempFileDir: '/tmp/'
+}));
 
 // --START--    App routers
+apiversion(app, {
+    v1: routerV1,
+    v2: routerV2
+})
 app.use('/', indexRouter)
 app.use('/', user)
 app.use('/department', department)
+
 
 // --END--      App routers
 
