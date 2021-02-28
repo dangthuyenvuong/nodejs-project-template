@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import { objExclude } from "./helper";
 
 export default class AbstractRestController {
-    model = null
+    model
     constructor(model) {
         this.model = model
 
