@@ -4,7 +4,7 @@ import app from '../../app'
 test('Should sign up for a user', async () => {
     await request(app).post('/register')
         .send({
-            "username": "admin",
+            "username": "admin" + new Date().getTime(),
             "password": "password@",
             "name": "supper admin"
         })
