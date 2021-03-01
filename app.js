@@ -7,7 +7,6 @@ import cookieParser from 'cookie-parser'
 import path from 'path'
 import createError from 'http-errors'
 
-
 // api version 
 import routerV1 from './resources/v1/routers'
 import routerV2 from './resources/v2/routers'
@@ -84,7 +83,6 @@ app.use(function (err, req, res, next) {
 
 
 // Setup server
-const port = process.env.PORT || '3000'
+const port = process.env.PORT || 3000
 app.set('port', port);
-
 export default app;

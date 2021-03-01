@@ -1,7 +1,6 @@
 import Token from "../models/token";
 import User from "../models/User";
 import md5 from 'md5'
-import { jwtCacheError } from './../middleware/JWTMiddleware'
 
 
 export default {
