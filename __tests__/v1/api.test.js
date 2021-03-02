@@ -1,5 +1,5 @@
 import request from 'supertest'
-import app from '../../app'
+import app from '../../src/app'
 
 test('Should sign up for a user', async () => {
     await request(app).post('/register')
